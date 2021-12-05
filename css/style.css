@@ -1,0 +1,46 @@
+.card-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card{
+    position: relative;
+}
+.card__labels{
+    position: absolute;
+    padding: 10px 0;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.label{
+    color: white;
+    font-size: 12px;
+    padding: 5px 20px 5px 10px;
+    -webkit-clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 50%, calc(100% - 10px) 100%, 0% 100%);
+}
+.label_vin {
+    background-color: blue;
+}
+.label_top{
+    background-color: rgb(20, 155, 53);
+} 
+.description-list {
+	margin: 10px 0 5px;
+	overflow: hidden;    
+}
+.description-list dt {
+	float: left;
+	margin: 0 10px 0 0;
+	color: #c96659;   
+}
+
+.createdAt{
+    border: 1px solid blue;
+    text-align: center;
+}
+    
