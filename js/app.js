@@ -62,7 +62,9 @@ function createStars(rating) {
   }
   return stars;
 }
-
+function createCarColor(color){
+  document.getElementById("car-color").style.color = color;
+}
 // function createVinCheck(vin_check = !false) {
 //     return '<div class="absolute vin-cod"><i class="fas fa-car"></i> Перевіреный VIN-код</div>'
 // }
@@ -95,13 +97,16 @@ function createCardHTML(cardData) {
         <div class="col-8">
             <div class="card-body">
                 <h2 class="card-title">${cardData.make} ${cardData.model} ${cardData.engine_volume}L (${
-    cardData.year
-  })</h2>
-                <div class="card-rating text-warning">${createStars(cardData.rating)}</div>
-                <h3 class="card-price">${cardData.price}$</h3>
-                <a href="tel:${cardData.phone}" class="btn btn-success"><i class="fas fa-phone-alt me-2"></i> Call to ${
-    cardData.seller
-  }</a>
+cardData.year})</h2>
+<div class="row">
+                <div class="col-4 card-rating text-warning">${createStars(cardData.rating)} </div>
+                <div class="col-4">views: ${cardData.views}</div>
+                </div>
+                <div class="row">
+                <h3 class="col-4 card-price">${cardData.price}$</h3>
+                <h3 class= "col-6" id="car-color">color: ${cardData.color}</h3>
+                </div>
+                <a href="tel:${cardData.phone}" class="btn btn-success"><i class="fas fa-phone-alt me-2"></i> Call to ${cardData.seller}</a>
 
                 <div class="row">
                 
@@ -120,12 +125,17 @@ function createCardHTML(cardData) {
                     </dl>
               
                 </div>
+                <div class="row">
+                  <h5>fuel consumption (l/100km)</h5>
+                  <div class="col-3"> <i class="fas fa-road"></i> ${cardData?.consume?.road ?? "-"}</div>
+                  <div class="col-3"> <i class="fas fa-city"></i> ${cardData?.consume?.city ?? "-"}</div>
+                  <div class="col-3"> <i class="fas fa-road"> </i><i class="fas fa-city"></i> ${cardData?.consume?.mixed ?? "-"}</div>
+                  </div>
+                  <div class= "col-4 createdAt">${cardData.createdAt}</div>
 
-                <div class= "col-4 createdAt">${cardData.createdAt}</div>
+                </div>
 
+              </div>
             </div>
-
-        </div>
-    </div>
-</div>`;
+          </div>`;
 }
