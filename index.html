@@ -17,7 +17,33 @@
         <div class="container">
             <h1 class="mb-3 text-center">Autoria</h1>
             <div class="row">
-                <div class="col-12 topbar" id="topbar">topbar</div>
+                <div class="col-12 topbar mb-3" id="topbar">
+                    <div class="row">
+                        <div class="col-4">
+                            <select id="sortSelect" class="form-select">
+                                <option value="" disabled selected>Sort by...</option>
+                                <option value="price/1">Price low to high</option>
+                                <option value="price/-1">Price high to low</option>
+                                <option value="year/1">Year old to new</option>
+                                <option value="year/-1">Year new to old</option>
+                                <option value="make/1">Make A-Z</option>
+                                <option value="make/-1">Make Z-A</option>
+                                <option value="top/-1">Top untop to top</option>
+                                <option value="top/1">Top top to untop</option>
+                                <option value="views/-1">Views more</option>
+                                <option value="views/1">Views less</option>
+                                <option value="vin_check/1">With VIN-check</option>
+                                <option value="vin_check/-1">Without Vin-check</option>
+                                <option value="engine_volume/-1">Engine volume biger</option>
+                                <option value="engine_volume/1">Engine volum lower</option>
+                                <option value="mileage/-1">Mileage Max to Min</option>
+                                <option value="mileage/1">Mileage Min to Max</option>
+                               
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-3 filterbar" id="filterbar">filterbar</div>
                 <div class="col-9 feed" id="feed">
                     
