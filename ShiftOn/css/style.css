@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background: #080702;
+    display: flex;
+    justify-content: space-between;
+    height: 47px;
+    align-items: center; 
+  
+    padding: 0 20px 0 20px;
+}
+
+.header__left-div{
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__select{
+   height: 16px;
+   align-items: center;
+   font-size: 14px;
+   color: #FFFFFF;
+   background: #080702;
+   border: none;
+   margin-right: 24px;
+  
+}
+
+.top-section{
+    background-image: url(/ShiftOn/img/baground.png);
+    color: #FFFFFF;
+
+}
+
+.top-section__h1{
+    margin: 0px 20px 40px 20px;
+
+}
